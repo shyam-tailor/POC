@@ -1,0 +1,53 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+$("#newrows").click(function()
+{
+	  
+var addcontrols = "<tr>" 
+    addcontrols+='<td><img src="D:\My favorite images\aa.jpg" alt="DisLand" style="width:50px"></td>'
+	              addcontrols+='<td><input type="text" name="Email" placeholder="Enter email..." ></td>'
+				  addcontrols+='<td><input type="text" name="passwrd" placeholder="Enter password..." ></td>'
+				  addcontrols+="</tr>";
+				  $("table tbody").append(addcontrols);
+
+
+				  
+		});
+});
+				  
+</script>
+				  
+	
+</head>
+
+<body>
+<center>
+
+<table border="1"  >
+<thead>
+<tr>
+<th>Uname</th>
+<th>EMail</th>
+<th>PassWord</th>
+</tr>
+</thead>
+<tbody>
+
+</tbody>
+<tfoot>
+<tr>
+<td><input type="button" value="Add New Rows" class="newrows" id="newrows"></td>
+</tr>
+</tfoot>
+
+
+</table>
+</center>
+
+
+</body>
+</html>

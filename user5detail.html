@@ -1,0 +1,67 @@
+<html>
+<head>
+<title>Form</title>
+<style>
+.form-section{
+		 width:500px;
+		 margin:auto;
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+</head>
+
+
+
+<body>
+<div class="form-section">
+      
+    <section>
+	     <form action=>
+		  <label for="Profile-Title">Profile-Title</label>
+		  <input type='text'  name="Profile-Title" id="Profile-Title" class="form-control" value="Devloper">
+		  <label for="User-Name">User-Name</label>
+		  <input type='text'  name="User-Name" id="User-Name" class="form-control" value='Sam'>
+		  <label for="Email">Email</label>
+		  <input type='email'  name="Email" id="Email" class="form-control" value="shyam@gmail.com">
+		  <label for="pass">Password</label>
+		  <input type='password'   id="pass" class="form-control" value="sam123">
+		  <input type='checkbox' onclick="myfunction()"  >Show Password</br>
+		  <label for="dob">DOB</label>
+		  <input type='date'  name="dob" id="dob" class="form-control" value="13-8-1999">
+		  <label for="number">Mobile-No</label>
+		  <input type='tel'  name="number" id="number" class="form-control" value="7734578876" >
+		  
+          <label for="color">Profile-Color</label>
+		  <input type='color'  name="pro-color" id="pro-color" class="form-control" value="#e56grff"></br>
+		  
+                    
+		  </form>
+		 </section>
+	</div>
+
+	
+<script>
+
+function myfunction()
+{
+var id=document.getElementById("pass");
+if(id.type==='password')
+    {
+    id.type='text';
+	
+	}
+else {
+id.type='password';
+}
+}
+
+</script>
+	
+	
+	
+	
+	
+	
+</body>
+</html>

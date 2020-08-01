@@ -1,0 +1,91 @@
+<html>
+<head>
+	
+	
+<style>
+
+html {
+  font-family: "Helvetica Neue", sans-serif;
+  width: 100%;
+  color: #666666;
+  text-align: center;
+}
+
+.popup-overlay {
+  /*Hides pop-up when there is no "active" class*/
+  visibility: hidden;
+  position: absolute;
+  background: #ffffff;
+  border: 3px solid #666666;
+  width: 30%;
+  height: 30%;
+  left: 40%;
+}
+
+.popup-overlay.active {
+  /*displays pop-up when "active" class is present*/
+  visibility: visible;
+  text-align: center;
+}
+
+.popup-content {
+  /*Hides pop-up content when there is no "active" class */
+  visibility: hidden;
+}
+
+.popup-content.active {
+  /*Shows pop-up content when "active" class is present */
+  visibility: visible;
+}
+
+button {
+  display: inline-block;
+  vertical-align: middle;
+  border-radius: 30px;
+  margin: .20rem;
+  font-size: 1rem;
+  color: #666666;
+  background: #ffffff;
+  border: 1px solid #666666;
+}
+
+button:hover {
+  border: 1px solid #666666;
+  background: #666666;
+  color: #ffffff;
+}
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+
+</head>
+<body>
+
+
+<div class="popup-overlay">
+  <!--Creates the popup content-->
+  <div class="popup-content">
+    <p>Name:Shyam Tailor<br>
+       Email:shyamtailo@gmail.com<br>
+       Contect:6350605937<br>
+       Age:20yr<br></p>
+    <!--popup's close button-->
+    <button class="close">Close</button> </div>
+</div>
+
+
+<script>
+$("#open").on("click", function() {
+  $(".popup-overlay, .popup-content").addClass("active");
+
+});
+
+
+
+$(".close, .popup").on("click", function(){
+$(".popup-overlay, .popup-content").removeClass("active");
+});
+
+</script>
+</body>
+</html>

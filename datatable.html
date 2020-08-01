@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+</style>
+</head>
+
+<body>
+<input type="text" id="myInput" placeholder="search for names..." onkeyup="myFunction()" title="Type in a name">
+
+<table id="myTable" border="1">
+<tr>
+<th>Image</th>
+<th>Name</th>
+<th>Email</th>
+<th>DOB</th>
+
+<th>View</th>
+<th>Edit</th>
+<th>Delete</th>
+</tr>
+
+<tr>
+<td><img src="D:\My favorite images\aa.jpg" alt="DisLand" style="width:50px"></td>
+<td>Shyam</td>
+<td>shyam@gmail.com</td>
+<td>15-8-1999</td>
+<td><a href="form1.html">View</a></td>
+<td><a href="#">Edit</a></td>
+<td><a href="#">Delete</a></td>
+</tr>
+
+<tr>
+<td><img src="D:\My favorite images\aa.jpg" alt="DisLand" style="width:50px"></td>
+<td>Aaditya</td>
+<td>Aaditya@gmail.com</td>
+<td>28-7-1999</td>
+<td><a href="form2.html">View</a></td>
+<td><a href="#">Edit</a></td>
+<td><a href="#">Delete</a></td>
+</tr>
+
+<tr>
+<td><img src="D:\My favorite images\aa.jpg" alt="DisLand" style="width:50px"></td>
+<td>Ram</td>
+<td>Ram@gmail.com</td>
+<td>19-12-1999</td>
+<td><a href="form3.html">View</a></td>
+<td><a href="#">Edit</a></td>
+<td><a href="#">Delete</a></td>
+</tr>
+
+<tr>
+<td><img src="D:\My favorite images\aa.jpg" alt="DisLand" style="width:50px"></td>
+<td>Sonia</td>
+<td>Sonia@gmail.com</td>
+<td>23-2-1999</td>
+<td><a href="form4.html">View</a></td>
+<td><a href="#">Edit</a></td>
+<td><a href="#">Delete</a></td>
+</tr>
+
+<tr>
+<td><img src="D:\My favorite images\aa.jpg" alt="DisLand" style="width:50px"></td>
+<td>Sam</td>
+<td>shyam@gmail.com</td>
+<td>13-8-1999</td>
+<td><a href="form5.html">View</a></td>
+<td><a href="#">Edit</a></td>
+<td><a href="#">Delete</a></td>
+</tr>
+
+<tr>
+<td><img src="D:\My favorite images\aa.jpg" alt="DisLand" style="width:50px"></td>
+<td>Aadi</td>
+<td>Aadigmail.com</td>
+<td>28-7-1999</td>
+<td><a href="form1.html">View</a></td>
+<td><a href="#">Edit</a></td>
+<td><a href="#">Delete</a></td>
+</tr>
+
+<tr>
+<td><img src="D:\My favorite images\aa.jpg" alt="DisLand" style="width:50px"></td>
+<td>vIJAY</td>
+<td>vijay@gmail.com</td>
+<td>29-12-1999</td>
+<td><a href="form2.html">View</a></td>
+<td><a href="#">Edit</a></td>
+<td><a href="#">Delete</a></td>
+</tr>
+
+<tr>
+<td><img src="D:\My favorite images\aa.jpg" alt="DisLand" style="width:50px"></td>
+<td>SonU</td>
+<td>SonU@gmail.com</td>
+<td>23-2-1999</td>
+<td><a href="form3.html">View</a></td>
+<td><a href="#">Edit</a></td>
+<td><a href="#">Delete</a></td>
+</tr>
+
+<tr>
+<td><img src="D:\My favorite images\aa.jpg" alt="DisLand" style="width:50px"></td>
+<td>Tanmay</td>
+<td>Tanmay@gmail.com</td>
+<td>29-12-1999</td>
+<td><a href="form4.html">View</a></td>
+<td><a href="#">Edit</a></td>
+<td><a href="#">Delete</a></td>
+</tr>
+
+<tr>
+<td><img src="D:\My favorite images\aa.jpg" alt="DisLand" style="width:50px"></td>
+<td>Seema</td>
+<td>Seemagmail.com</td>
+<td>23-2-1999</td>
+<td><a href="form5.html">View</a></td>
+<td><a href="#">Edit</a></td>
+<td><a href="#">Delete</a></td>
+</tr>
+
+
+
+</table>
+
+
+
+
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[1];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+
+</body>
+
+</html>

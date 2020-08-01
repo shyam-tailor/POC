@@ -1,0 +1,39 @@
+<html>
+<head>
+<title>Lazy Loading</title>
+
+<script src="https://rawgit.com/intoro/Lazy_Load_JQuery/master/js/2_2_4_jquery.min.js"></script>
+  <script src="https://rawgit.com/intoro/Lazy_Load_JQuery/master/js/1_9_7_jquery.lazyload.js"></script>
+
+<style>
+	img.lazy {
+        width: 700px; 
+        height: 467px; 
+        display: block;
+    }
+	</style>
+
+</head>
+<body>	
+ <img class="lazy"  data-original="https://rawgit.com/intoro/Lazy_Load_JQuery/master/img/image_1.jpg" width="765" height="574">
+  <img class="lazy"  data-original="https://rawgit.com/intoro/Lazy_Load_JQuery/master/img/image_2.jpg" width="765" height="574">
+  <img class="lazy"  data-original="https://rawgit.com/intoro/Lazy_Load_JQuery/master/img/image_3.jpg" width="765" height="574">
+  <img class="lazy"  data-original="https://rawgit.com/intoro/Lazy_Load_JQuery/master/img/image_4.jpg" width="765" height="574">
+  <img class="lazy"  data-original="https://rawgit.com/intoro/Lazy_Load_JQuery/master/img/image_5.jpg" width="765" height="574">
+  <img class="lazy"  data-original="https://rawgit.com/intoro/Lazy_Load_JQuery/master/img/image_6.jpg" width="765" height="574">
+    <img class="lazy"  data-original="https://rawgit.com/intoro/Lazy_Load_JQuery/master/img/image_7.jpg" width="765" height="574">
+
+
+<script>
+$(document).ready(function(){
+  $('img.lazy').lazyload({
+    effect: "fadeIn"
+  });
+});
+
+</script>
+
+
+
+</body>
+</html>

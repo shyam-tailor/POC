@@ -1,0 +1,150 @@
+
+
+
+<html>
+<head>
+<title>Form</title>
+<style>
+.form-section{
+		 width:500px;
+		 margin:auto;
+}
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+
+
+
+
+
+</head>
+
+
+
+<body>
+<div class="form-section">
+      
+    <section>
+	     <form   id="Submit-Form" method="get" >
+		  <label for="Profile-Title">Profile-Title</label>
+		  <input type='text'  name="roll" id="roll" class="form-control" >
+		  <label for="User-Name">User-Name</label>
+		  <input type='text'  name="name" id="name" class="form-control">
+		  <label for="Email">Email</label>
+		  <input type='email'  name="Email" id="Email" class="form-control">
+		  <label for="pass">Password</label>
+		  <input type='password'  name="pass" id="pass" class="form-control">
+		  <input type='checkbox' onclick="myfunction()"  >Show Password</br>
+		  <label for="dob">DOB</label>
+		  <input type='date'  name="dob" id="dob" class="form-control">
+		  <label for="number">Mobile-No</label>
+		  <input type='tel'  name="number" id="number" class="form-control">
+		  <label for="color">Profile-Color</label>
+		  <input type='color'  name="color" id="color" class="form-control"></br>
+		  <input type='submit' value="Submit" class="btn btn-primary" id='save'>
+		  <input type='submit' value="All " class="btn btn-primary" id='all'>
+		   <input type='submit' value="Delete " class="btn btn-primary" id='del'>
+                    
+		  </form>
+		 </section>
+	</div>
+
+
+
+	
+<script>
+
+function myfunction()
+{
+var id=document.getElementById("pass");
+if(id.type==='password')
+    {
+    id.type='text';
+	
+	}
+else {
+id.type='password';
+}
+}
+
+document.getElementById("Email").innerHTML=localStorage.getItem("textvalue");
+</script>
+
+
+
+<script>
+
+$(document).ready(function(){
+$('#save').click(function(e){
+e.preventDefault();
+      var obj = {
+      	profile: $('input[name=roll]').val(),
+        name: $('input[name=name]').val(),
+        email: $('input[name=Email]').val(),
+        pass: $('input[name=pass]').val(),
+        dob:$('input[name=dob]').val(),
+        number:$('input[name=number]').val(),
+        color:$('input[name=color]').val()
+    }
+$.ajax({
+	type:'POST',
+	url:'http://localhost:3006/submit',
+	datatype:'json',
+	
+
+
+
+
+
+
+
+
+
+
+});
+
+      console.log(obj);
+});
+});
+
+</script>
+
+<script>
+
+$(document).ready(function(){
+$('#all').click(function(f){
+f.preventDefault();
+
+$.ajax({     
+	type:'GET',
+	url:
+	,
+	datatype:'json',
+
+	beforeSend: function(xhr){xhr.setRequestHeader('X-Test-Header', 'test-value');},
+	success:function(){
+		console.log("Hii");
+
+	},
+	error:function(){
+		console.log("Bye");
+	},
+
+});
+
+
+
+   
+});
+});
+
+</script>
+	
+	
+	
+	
+	
+	
+</body>
+</html>
+}

@@ -1,0 +1,35 @@
+<html>
+<head<script type="text/javascript" src="jquery.lazy.min.js"></script>
+<script>
+	 $('.lazy').Lazy({
+        // your configuration goes here
+        scrollDirection: 'vertical',
+        effect: 'fadeIn',
+        visibleOnly: true,
+        onError: function(element) {
+            console.log('error loading ' + element.data('src'));
+        }
+    });
+
+
+
+</script>
+</head>
+
+<script>
+	 var lazy = $('.lazy').Lazy({ chainable: false });
+
+    var attributeName = lazy.config('attribute');  // get
+    lazy.config('effect', 'show');    
+</script>
+</head>
+
+
+<body>
+ <img class="lazy" data-src="aa.jpg" >
+
+    <!-- load background images of other element types -->
+    <img class="lazy" data-src="photo1.png.jpg">
+
+ </body>
+ </html>

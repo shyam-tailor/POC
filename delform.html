@@ -1,0 +1,40 @@
+<html>
+<head>
+	<title>Del User </title>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+
+<label for="User-Name">User-Name</label>
+<input type='text'  name="uname" id="uname" >
+<input type='submit' value="Delete "  id='del'>
+
+
+
+
+</body>
+
+<script>
+	$(document).ready(function(){
+		$('#del').click(function(e){
+			e.preventDefault();
+				var data={name:$('input[name=uname]').val()}
+
+	$.ajax({
+				url:'http://localhost:3003/delete:Id',
+				data:'json',
+				type:'DELETE',
+				data:data
+
+
+	});		
+	console.log(data);	
+			
+		});
+	});
+</script>
+</html>
+
